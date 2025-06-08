@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Martín Gilabert Vio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {background-color: black;}
 h1   {color: white;}
@@ -36,6 +37,24 @@ article {
   padding: 20px;
 
 }
+.collapsible {
+  background-color: rgb(50, 50, 90);
+  border: none;
+  color: white;
+  
+  font-size: 16px;
+  text-align: left;
+  font-family: serif, verdana;
+}
+
+.active, .collapsible:hover {
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  padding: 0px;
+}
 
 </style>
 </head>
@@ -52,30 +71,49 @@ article {
 
 <p>My professional email is gilabert at math dot univ-lyon1 dot fr. My office is bureau 131, bâtiment Braconnier, Institut Camille Jordan, 43 boulevard du 11 novembre 1918, 69622 Villeurbanne, France.</p>
   
-<h2>Preprints</h2>
+<h2>Preprints <font size="3"> (click on the title to display the paper's abstract)</font></h2>
   
 <ul>
-  <li><strong>The Poisson boundary of Thompson's group T is not the circle </strong> (with <a href="https://www.math.princeton.edu/people/cosmas-kravaris">Cosmas Kravaris</a> and <a href="https://edoasd.github.io/eduardo_silva_math/index.html">Eduardo Silva</a>) <br>
+ <li> <button type="button" class="collapsible"><strong>The Poisson boundary of Thompson's group T is not the circle </strong> </button> <div class="content">
+  <p> Let μ be a nondegenerate probability measure with finite entropy on a countable group G≤Homeo+(S1) of orientation-preserving homeomorphisms of the circle acting proximally, minimally and topologically nonfreely on S1. We prove that the circle S1 endowed with its unique μ-stationary probability measure is not the Poisson boundary of (G,μ). When G is Thompson's group T and μ is finitely supported, this answers a question posed by B. Deroin [Ergodic Theory Dynam. Systems, 2013] and A. Navas [Proceedings of the International Congress of Mathematicians, 2018]. </p><br>
+</div> 
+(with <a href="https://www.math.princeton.edu/people/cosmas-kravaris">Cosmas Kravaris</a> and <a href="https://edoasd.github.io/eduardo_silva_math/index.html">Eduardo Silva</a>) <br>
   
   2025 preprint. <a href="https://arxiv.org/abs/2504.01283">arxiv pdf</a> <br>
 
-  Here's a <a href="posters/poster_SILVA_yggt2025.pdf">poster</a> Eduardo made about this paper, presented at <a href="https://sites.google.com/view/yggt2025">YGGT XIII</a> on April 2025. </li>
-  
-  <br>
+  Here's a <a href="posters/poster_SILVA_yggt2025.pdf">poster</a> Eduardo made about this paper, presented at <a href="https://sites.google.com/view/yggt2025">YGGT XIII</a> on April 2025. </li> <br>
     
-  <li><strong>Probabilistic Tits alternative for circle diffeomorphisms </strong> <br>
+  <li><button type="button" class="collapsible"><strong>Probabilistic Tits alternative for circle diffeomorphisms </strong></button> <div class="content"> 
+  <p> Let μ1,μ2 be probability measures on Diff1+(S1) satisfying a suitable moment condition and such that their supports genererate discrete groups acting proximally on S1. Let (fnω)n∈N,(fnω′)n∈N be two independent realizations of the random walk driven by μ1,μ2 respectively. We show that almost surely there is an N∈N such that for all n≥N the elements fnω,fnω′ generate a nonabelian free group. The proof is inspired by the strategy by R. Aoun for linear groups and uses work of A. Gorodetski, V. Kleptsyn and G. Monakov, and of P. Barrientos and D. Malicet. A weaker (and easier) statement holds for measures supported on Homeo+(S1) with no moment conditions. </p>
+  </div> <br>
     
-  2024 preprint. <a href="https://arxiv.org/abs/2412.08779">arxiv pdf</a> </li>
-  
-  <br>
+  2024 preprint. <a href="https://arxiv.org/abs/2412.08779">arxiv pdf</a> </li> <br>
     
-  <li> <strong>Dynamical Tits alternative for groups of almost automorphisms of trees </strong> <br>
+  <li><button type="button" class="collapsible"><strong>Dynamical Tits alternative for groups of almost automorphisms of trees </strong></button><div class="content"> 
+  <p> We prove a dynamical variant of the Tits alternative for the group of almost automorphisms of a locally finite tree T: a group of almost automorphisms of T either contains a nonabelian free group playing ping-pong on the boundary ∂T, or the action of the group on ∂T preserves a probability measure. This generalises to all groups of tree almost automorphisms a result of S. Hurtado and E. Militon for Thompson's group V, with a hopefully simpler proof. 
+  </p>
+  </div> <br>
   
-  2024 preprint. <a href="https://arxiv.org/abs/2412.08784">arxiv pdf</a> </li>
-  
-  <br>
+  2024 preprint. <a href="https://arxiv.org/abs/2412.08784">arxiv pdf</a> </li> <br>
 </ul>
 </article>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 
 </body>
 </html>
